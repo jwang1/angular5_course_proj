@@ -8,13 +8,14 @@ import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module';
 import { HeaderComponent } from './header/header.component';
 import { ShoppingListComponent } from './feature/shopping-list/shopping-list/shopping-list.component';
 import { ShoppingListEditComponent } from './feature/shopping-list/shopping-list/shopping-list-edit/shopping-list-edit.component';
-import { RecipeListComponent } from './feature/recipe-book/recipe-list/recipe-list.component';
-import { RecipeItemComponent } from './feature/recipe-book/recipe-list/recipe-item/recipe-item.component';
-import { RecipeDetailComponent } from './feature/recipe-book/recipe-detail/recipe-detail.component';
+import { RecipeListComponent } from './feature/recipes/recipe-list/recipe-list.component';
+import { RecipeItemComponent } from './feature/recipes/recipe-list/recipe-item/recipe-item.component';
+import { RecipeDetailComponent } from './feature/recipes/recipe-detail/recipe-detail.component';
 import { FooterComponent } from './footer/footer.component';
 import { AsideComponent } from './aside/aside.component';
 import { ArticleComponent } from './article/article.component';
 import { NavComponent } from './nav/nav.component';
+import {RecipesComponent} from './feature/recipes/recipes.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NavComponent } from './nav/nav.component';
     FooterComponent,
     AsideComponent,
     ArticleComponent,
-    NavComponent
+    NavComponent,
+    RecipesComponent
   ],
   imports: [
     BrowserModule,
