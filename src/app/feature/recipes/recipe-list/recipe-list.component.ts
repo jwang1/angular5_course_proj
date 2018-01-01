@@ -13,6 +13,12 @@ export class RecipeListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.recipes.push(
+      new Recipe('Test Recipe', 'for testing',
+        'http://maxpixel.freegreatpicture.com/static/photo/1x/Recipe-Salad-Kitchen-Foodie-Food-Dish-Gastronomy-1069916.jpg'),
+      new Recipe('Test2', 'check multi-list',
+        'http://maxpixel.freegreatpicture.com/static/photo/1x/Recipe-Ingredients-Eat-Meals-Plate-Kitchen-Food-2833735.jpg')
+    );
   }
 
 }
