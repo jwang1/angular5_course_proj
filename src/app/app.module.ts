@@ -7,7 +7,7 @@ import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module';
 
 import { HeaderComponent } from './header/header.component';
 import { ShoppingListComponent } from './feature/shopping-list/shopping-list/shopping-list.component';
-import { ShopingListEditComponent } from './feature/shopping-list/shopping-list/shoping-list-edit/shoping-list-edit.component';
+import { ShoppingListEditComponent } from './feature/shopping-list/shopping-list/shopping-list-edit/shopping-list-edit.component';
 import { RecipeListComponent } from './feature/recipe-book/recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './feature/recipe-book/recipe-list/recipe-item/recipe-item.component';
 import { RecipeDetailComponent } from './feature/recipe-book/recipe-detail/recipe-detail.component';
@@ -20,7 +20,7 @@ import { ArticleComponent } from './article/article.component';
     AppComponent,
     HeaderComponent,
     ShoppingListComponent,
-    ShopingListEditComponent,
+    ShoppingListEditComponent,
     RecipeListComponent,
     RecipeItemComponent,
     RecipeDetailComponent,
