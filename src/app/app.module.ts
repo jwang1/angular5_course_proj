@@ -7,9 +7,9 @@ import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module';
 
 import { HeaderComponent } from './header/header.component';
 import { ShoppingListComponent } from './feature/shopping-list/shopping-list/shopping-list.component';
-import { ShopingListEditComponent } from './feature/shopping-list/shoping-list-edit/shoping-list-edit.component';
+import { ShopingListEditComponent } from './feature/shopping-list/shopping-list/shoping-list-edit/shoping-list-edit.component';
 import { RecipeListComponent } from './feature/recipe-book/recipe-list/recipe-list.component';
-import { RecipeItemComponent } from './feature/recipe-book/recipe-item/recipe-item.component';
+import { RecipeItemComponent } from './feature/recipe-book/recipe-list/recipe-item/recipe-item.component';
 import { RecipeDetailComponent } from './feature/recipe-book/recipe-detail/recipe-detail.component';
 import { FooterComponent } from './footer/footer.component';
 import { AsideComponent } from './aside/aside.component';
