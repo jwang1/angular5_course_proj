@@ -14,6 +14,7 @@ import { RecipeDetailComponent } from './feature/recipe-book/recipe-detail/recip
 import { FooterComponent } from './footer/footer.component';
 import { AsideComponent } from './aside/aside.component';
 import { ArticleComponent } from './article/article.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ArticleComponent } from './article/article.component';
     RecipeDetailComponent,
     FooterComponent,
     AsideComponent,
-    ArticleComponent
+    ArticleComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
