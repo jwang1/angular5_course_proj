@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  // default it to recipe
+  // It gets updated when NavComponent::onSelect is called
+  // when "recipe" or "shopping-list" menu is clicked / selecte
+  feature = 'recipe';
 
   constructor() {
   }
@@ -13,4 +17,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  navFeature($event) {
+    this.feature = $event;
+  }
 }

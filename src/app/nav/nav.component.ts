@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Output,
+  EventEmitter
+} from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -6,10 +11,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
+  @Output()
+  selectedFeature = new EventEmitter<string>();
+
+  activeFeature = 'recipe';
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onSelect(feature: string) {
+    this.selectedFeature.emit(feature);
+    this.activeFeature = feature;
+  }
 }

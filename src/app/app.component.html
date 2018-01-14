@@ -1,11 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-header></app-header>
+<app-header #navToFeature></app-header>
 
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>
+      <app-recipes *ngIf="displayingFeature === 'recipe'"></app-recipes>
+      <hr>
+      <app-shopping-list *ngIf="displayingFeature !== 'recipe'"></app-shopping-list>
     </div>
   </div>
 </div>
