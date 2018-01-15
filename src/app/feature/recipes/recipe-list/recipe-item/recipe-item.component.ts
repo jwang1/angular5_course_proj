@@ -10,12 +10,12 @@ import {Recipe} from '../../../../model/recipe/recipe.model';
 })
 export class RecipeItemComponent implements OnInit {
   @Input()
-  allRecipes: Recipe[];
+  recipe: Recipe;
 
   constructor() { }
 
   ngOnInit() {
-    console.log('allRecipes = ' + this.allRecipes);
+    console.log('recipe = ' + this.recipe);
   }
 
 }

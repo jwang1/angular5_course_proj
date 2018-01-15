@@ -8,7 +8,7 @@
 
   <div class="row" >
     <div class="col-xs-12">
-      <app-recipe-item [allRecipes]="recipes"></app-recipe-item>
+      <app-recipe-item *ngFor="let rcp of recipes" [recipe]="rcp"></app-recipe-item>
     </div>
   </div>
 </div>
