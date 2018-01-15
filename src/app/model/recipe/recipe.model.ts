@@ -8,4 +8,9 @@ export class Recipe {
     this.description = desc;
     this.imagePath = ipath;
   }
+
+  public toString(): string {
+    return '{ name: ' + this.name + ', description: ' + this.description +
+      ', imagePath: ' + this.imagePath + '}';
+  }
 }
