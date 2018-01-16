@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, ElementRef} from '@angular/core';
+import {Component, OnInit, Input, ElementRef, ViewChild} from '@angular/core';
 import {Ingredient} from '../../../../model/ingredient/ingredient.model';
 
 @Component({
@@ -10,12 +10,18 @@ export class ShoppingListEditComponent implements OnInit {
   @Input('allIngredients')
   ingredients: Ingredient[];
 
+  @ViewChild('nm')
+  nameElem: ElementRef;
+
+  @ViewChild('amt')
+  amountElem: ElementRef;
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  onAdd(name: any, amount: any) {
-    this.ingredients.push(new Ingredient(name.value, amount.value));
+  onAdd() {
+    this.ingredients.push(new Ingredient(this.nameElem.nativeElement.value, this.amountElem.nativeElement.value));
   }
 }
