@@ -2,5 +2,10 @@
   <app-recipe-list (selectedRecipe)="showSelectedRecipe($event)"></app-recipe-list>
 </div>
 <div class="col-md-7">
-  <app-recipe-detail *ngIf="recipeToDisplay != null" [recipe]="recipeToDisplay" ></app-recipe-detail>
+  <app-recipe-detail *ngIf="recipeToDisplay != null; else prmpt" [recipe]="recipeToDisplay" ></app-recipe-detail>
+
+  <!-- above populate template local variable #prmpt only when recipeToDisplay is null -->
+  <ng-template #prmpt>
+    <p class="panel-heading">Please select a Recipe</p>
+  </ng-template>
 </div>
