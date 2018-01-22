@@ -17,6 +17,8 @@ import { ArticleComponent } from './article/article.component';
 import { NavComponent } from './nav/nav.component';
 import {RecipesComponent} from './feature/recipes/recipes.component';
 
+import { DropdownDirective } from './shared/dropdown.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,8 @@ import {RecipesComponent} from './feature/recipes/recipes.component';
     AsideComponent,
     ArticleComponent,
     NavComponent,
-    RecipesComponent
+    RecipesComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
