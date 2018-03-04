@@ -5,6 +5,7 @@ import {EventEmitter} from '@angular/core';
 export class RecipeService {
   recipes: Recipe[] = [];
 
+  // used to communite between components.
   recipeSelected: EventEmitter<Recipe> = new EventEmitter<Recipe>();
 
   constructor() {
