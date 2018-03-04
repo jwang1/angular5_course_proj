@@ -1,7 +1,9 @@
 import {Recipe} from '../../model/recipe/recipe.model';
 import {Ingredient} from '../../model/ingredient/ingredient.model';
-import {EventEmitter} from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
+import {ShoppingService} from '../shopping-list/shopping-list/shopping.service';
 
+@Injectable()
 export class RecipeService {
   private recipes: Recipe[] = [
     new Recipe('Test Recipe', 'for testing',
@@ -17,11 +19,14 @@ export class RecipeService {
   // used to communite between components.
   recipeSelected: EventEmitter<Recipe> = new EventEmitter<Recipe>();
 
-  constructor() { }
+  constructor(private shoppingService: ShoppingService) { }
 
   getRecipes(): Recipe[] {
     // returns a COPYE of the recipes array, so that callers not able to change the recipes.
     return this.recipes.slice();
   }
 
+  shopIngredients(ingredients: Ingredient[]) {
+      this.shoppingService.shopIngredients(ingredients);
+  }
 }

@@ -29,4 +29,10 @@ export class ShoppingService {
     }
   }
 
+  shopIngredients(ingredients: Ingredient[]) {
+      // ES6 operator ... converts array into a list, note, push allows list (not array)
+      this.ingredients.push(...ingredients);
+
+      this.ingredientsUpdated.emit(true);
+  }
 }
