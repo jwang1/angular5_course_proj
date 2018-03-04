@@ -1,8 +1,8 @@
 <div class="col-md-5">
-  <app-recipe-list (selectedRecipe)="showSelectedRecipe($event)"></app-recipe-list>
+  <app-recipe-list></app-recipe-list>
 </div>
 <div class="col-md-7">
-  <app-recipe-detail *ngIf="recipeToDisplay != null; else prmpt" [recipe]="recipeToDisplay" ></app-recipe-detail>
+  <app-recipe-detail *ngIf="recipeToDisplay != null; else prmpt"></app-recipe-detail>
 
   <!-- above populate template local variable #prmpt only when recipeToDisplay is null -->
   <ng-template #prmpt>
