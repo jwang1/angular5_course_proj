@@ -18,6 +18,7 @@ import { NavComponent } from './nav/nav.component';
 import {RecipesComponent} from './feature/recipes/recipes.component';
 
 import { DropdownDirective } from './shared/dropdown.directive';
+import {ShoppingService} from './feature/shopping-list/shopping-list/shopping.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { DropdownDirective } from './shared/dropdown.directive';
     BrowserModule,
     AppBootstrapModule
   ],
-  providers: [],
+  // ShoppingService will be access by both shopping-feature and the recipe-feature
+  providers: [ShoppingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

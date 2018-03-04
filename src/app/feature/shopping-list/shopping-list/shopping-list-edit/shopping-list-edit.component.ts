@@ -1,5 +1,6 @@
-import {Component, OnInit, Input, ElementRef, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {Ingredient} from '../../../../model/ingredient/ingredient.model';
+import {ShoppingService} from '../shopping.service';
 
 @Component({
   selector: 'app-shoping-list-edit',
@@ -7,8 +8,7 @@ import {Ingredient} from '../../../../model/ingredient/ingredient.model';
   styleUrls: ['./shopping-list-edit.component.css']
 })
 export class ShoppingListEditComponent implements OnInit {
-  @Input('allIngredients')
-  ingredients: Ingredient[];
+  ingredientBeingUpdated: Ingredient = null;
 
   @ViewChild('nm')
   nameElem: ElementRef;
@@ -16,12 +16,23 @@ export class ShoppingListEditComponent implements OnInit {
   @ViewChild('amt')
   amountElem: ElementRef;
 
-  constructor() { }
+  constructor(private shoppingSrv: ShoppingService) { }
 
   ngOnInit() {
+    this.shoppingSrv.ingredientSelected.subscribe(i => this.ingredientBeingUpdated = i);
+
+    if (this.ingredientBeingUpdated !== null) {
+      this.nameElem.nativeElement.value = this.ingredientBeingUpdated.name;
+      this.amountElem.nativeElement.value = this.ingredientBeingUpdated.amount;
+    }
   }
 
-  onAdd() {
-    this.ingredients.push(new Ingredient(this.nameElem.nativeElement.value, this.amountElem.nativeElement.value));
+  onAddOrUpdate() {
+    if (this.nameElem.nativeElement.value !== '' && this.amountElem.nativeElement.value !== '') {
+      this.shoppingSrv.addOrUpdateIngredient(new Ingredient(this.nameElem.nativeElement.value, this.amountElem.nativeElement.value));
+    } else {
+      alert('please enter ingredient name and amount.');
+    }
   }
+
 }
